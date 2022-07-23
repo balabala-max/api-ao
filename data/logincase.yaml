@@ -1,0 +1,11 @@
+- data:
+    appid: '4567'
+    openid: '1234'
+    unionid: '23231442'
+  detail: 登录接口
+  expdata:
+    code: 0
+    msg: 登录成功!
+    token: 234af73571da46ade79ea6a74961b1d23d609b79
+
+

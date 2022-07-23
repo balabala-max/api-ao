@@ -1,0 +1,29 @@
+[
+  {
+    "detail": "用户名正确，密码正确",
+    "data": {
+      "username": "sq0313",
+      "password": "111111"
+    },
+    "resp": {
+      "code": 20000,
+      "msg": "成功"
+    }
+  },
+  {
+    "detail": "用户名正确，密码为空",
+    "data": {
+      "username": "sq0313",
+      "password": ""
+    },
+    "resp": {
+      "code": 9999,
+      "msg": "输入的密码错误!"
+    }
+  }
+]
+
+
+
+
+

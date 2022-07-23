@@ -1,0 +1,57 @@
+
+-
+  detail: 创建订单
+  request:
+    address: 223
+    channel: '2'
+    channelShopCode: M2-1001
+    code: ''
+    internalPurchaseVo:
+    - activityId: ''
+      brandNo: 10
+      count: 1
+      goodsName: BOOM
+      guideInfo: ''
+      offlineStoreCode: '1166'
+      saleType: 2
+      salesPrice: 1999
+      sku: '200502667'
+      spu: P00211
+  response:
+    code: 0
+    msg: 创建订单成功！
+    orderno: M25345363534534534534
+
+
+
+
+
+
+- detail: 调支付接口
+  data:
+    openid: '1234'
+    store: '1020'
+    token: 234af73571da46ade79ea6a74961b1d23d609b79
+  expdata:
+    code: 0
+    mdg: 调取支付接口成功!
+
+
+- detail: 调支付接口
+  resdata:
+    orderno: M25345363534534534534
+    orderprice: '32145'
+  res:
+    code: 0
+    msg: 支付成功!
+
+
+- data:
+    appid: '4567'
+    openid: '1234'
+    unionid: '23231442'
+  detail: 登录接口
+  expdata:
+    code: 0
+    mdg: 登录成功!
+    token: 234af73571da46ade79ea6a74961b1d23d609b79

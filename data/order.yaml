@@ -1,0 +1,17 @@
+Order:
+    createOrder:   #创建订单
+        path: /order/save?token=
+        method: POST
+    payorder:
+        path: /perfume/order/wxpay/mp2/ #支付接口
+        method: GET
+    payedorder:  #已支付接口
+        path: /api/v1/pay-srv/pay/wxpay/notify?_flag=false
+        method: POST
+
+Logining:
+    login:
+        path: /api/v1/member-auth/wechat-member/idomall/is-exist-user
+        method: GET
+
+

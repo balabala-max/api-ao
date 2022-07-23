@@ -1,0 +1,216 @@
+[
+{
+	"description":"提交申请接口",
+	"request":{ 
+        "method":"POST",
+		"uri":"/api/order/create/",
+        "json":{
+                    "user_id":"sq001",
+                    "goods_id":"20201012",
+					"num":2,
+                    "amount":100.8
+            }
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+        "status":200,
+        "json":{
+                 "order_id": "6666"
+            }
+        }
+},
+{
+	"description":"查询申请结果接口",
+	"request":{ 
+        "method":"GET",
+		"uri":"/api/order/get_result/",
+        "queries":{
+                    "order_id": "6666"
+            }
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+        "status":200,
+        "json":{
+                    "user_id":"sq001",
+                    "goods_id":"20201012",
+					"num":2,
+                    "amount":100.8,
+					"msg":"成功"
+            }
+        }
+},
+{
+	"description":"登录接口",
+	"request":{ 
+        "method":"POST",
+		"uri":"/api/v1/login/",
+        "json":{
+                    "username": "test",
+					"password": "123456"
+            }
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+			"code": 0,
+			"msg": "login success!",
+			"token": "234af73571da46ade79ea6a74961b1d23d609b79",
+			"username": "test"
+			}
+        }
+},
+{
+	
+	"description":"用户信息",
+	"request":{ 
+		"headers":{
+			"Authorization": "token=234af73571da46ade79ea6a74961b1d23d609b79"
+		},
+        "method":"GET",
+		"uri":"/api/v1/user/info/"
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+					"msg": "sucess!",
+					"code": 0,
+					"data": [{
+						"id": 15,
+						"name": "test",
+						"sex": "F",
+						"age": 20,
+						"mail": "1122@qq.com",
+						"create_time": "2020-12-18"
+	}]
+}
+
+        }
+},
+{
+	
+	"description":"小程序获取token信息",
+	"request":{ 
+        "method":"GET",
+		"uri":"/api/v1/member-auth/wechat-member/idomall/is-exist-user",
+		"queries":{
+			"openid": "1234",
+			"appid": "4567",
+			"unionid": "23231442"
+		}
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+					"mdg": "登录成功!",
+					"code": 0,
+					"token":"234af73571da46ade79ea6a74961b1d23d609b79"
+}
+
+        }
+},
+{
+	"description":"创建订单",
+	"request":{ 
+        "method":"POST",
+		"uri":"/order/save",
+		"queries":{
+			"token": "234af73571da46ade79ea6a74961b1d23d609b79"
+		},
+        "json":{
+			"address": 223,
+			"channel": "2",
+			"channelShopCode": "M2-1001",
+			"code": "",
+			"internalPurchaseVo": [
+				{
+					"brandNo": 10,
+					"count": 1,
+					"goodsName": "BOOM",
+					"salesPrice": 1999,
+					"sku": "200502667",
+					"spu": "P00211",
+					"saleType": 2,
+					"offlineStoreCode": "1166",
+					"guideInfo": "",
+					"activityId": ""
+        }
+		]}
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+			"code": 0,
+			"msg": "创建订单成功！",
+			"orderno": "M25345363534534534534"
+			}
+        }
+},
+{
+	
+	"description":"调取支付接口",
+	"request":{ 
+        "method":"GET",
+		"uri":"/perfume/order/wxpay/mp2/M25345363534534534534",
+		"queries":{
+			"token": "234af73571da46ade79ea6a74961b1d23d609b79",
+			"openid": "1234",
+			"store": "1020"
+		}
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+					"mdg": "调取支付接口成功!",
+					"code": 0
+					
+}
+
+        }
+},
+{
+	"description":"小程序成功下单接口",
+	"request":{ 
+        "method":"POST",
+		"uri":"/api/v1/pay-srv/pay/wxpay/notify",
+		"queries":{
+			"_flag":"false"
+		},
+        "json":{
+                    "orderprice": "32145",
+					"orderno": "M25345363534534534534"
+            }
+        },
+	"response":{
+		"headers":{
+			"Content-Type":"application/json"
+            },
+			"status":200,
+			"json":{
+			"code": 0,
+			"msg": "支付成功!"
+
+			}
+        }
+}
+
+]

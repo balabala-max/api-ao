@@ -1,0 +1,2 @@
+class GlobalData(object):
+   cookie = {}

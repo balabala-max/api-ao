@@ -1,0 +1,52 @@
+test_login:
+    detail: 小程序获取token信息
+    data:
+      openid: 1234
+      appid: 4567
+      unionid: 23231442
+    expdata:
+      mdg: 登录成功
+      code: 0
+      toekn: ${token}
+
+
+test_order_case:
+    detail: 创建订单
+    data:
+      address: 223
+      channel: '2'
+      channelShopCode: M2-1001
+      code: ''
+      internalPurchaseVo:
+        - activityId: ''
+          brandNo: 10
+          count: 1
+          goodsName: BOOM
+          guideInfo: ''
+          offlineStoreCode: '1166'
+          saleType: 2
+          salesPrice: 1999
+          sku: '200502667'
+          spu: P00211
+    expdata:
+      code: 0
+      msg: 创建订单成功！
+      orderno: M25345363534534534534
+
+
+test_pay_order_1:
+    data:
+      openid: '1234'
+      store: '1020'
+      token: ${token}
+    expdata:
+      code: 0
+      mdg: 调取支付接口成功!
+
+test_payorder:
+    data:
+      orderno: ${orderno}
+      orderprice: '32145'
+    expdata:
+      code: 0
+      msg: 支付成功!
