@@ -1,0 +1,4 @@
+init_sql:
+  select_user:
+    - "SELECT item_biz_id from pay_bill_order_item where tid='{}';"
+    - "SELECT amount from pay_order where pay_order_no='{}';"

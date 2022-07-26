@@ -48,3 +48,4 @@ def test_data(request):
     test_name = request.function.__name__
     # print('信息信息在这',test_name)
     return  ordercase.get(test_name)
+

@@ -34,35 +34,12 @@ def  get_yaml_caseData(firDir,yongliname):
                     res[yongliname]['expdata']))
     return resList
 
-import yaml
-import os
-from string import Template
-import json
-
-def replace_yaml(data,**kwargs):
-    tempTemplate1 = Template(json.dumps(data))
-    dic = {}
-    if len(kwargs) == 0 :
-        data = tempTemplate1.safe_substitute(os.environ)
-    else:
-        for key in kwargs:
-            dic[key] = kwargs[key]
-        data = tempTemplate1.safe_substitute(dic)
-    data = json.loads(data)
-    return data
-
-
-
-
 
 
 orderyaml = os.path.join(test_path,'tt.yaml')
+mysqlyaml = os.path.join(test_path,'mysql_data.yaml')
 
 ordercase = get_yaml_data(orderyaml)
-print(ordercase['test_order_case']['data'])
-# print((ordercase['test_login']['detail'],ordercase['test_login']['data']))
-
-
-
-b= get_yaml_caseData(orderyaml,'test_login')
-# print(b)
+mysql_yamldata = get_yaml_data(mysqlyaml)
+print(mysql_yamldata['init_sql']['select_user'])
+mysql_select  = str(mysql_yamldata['init_sql']['select_user'])

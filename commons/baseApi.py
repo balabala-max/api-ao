@@ -9,6 +9,7 @@ import inspect
 import os
 from utils.handle_yaml import get_yaml_data
 from configs.config_test import test_path,HOST
+from configs.logger import logger
 import requests
 import  json
 '''
@@ -76,3 +77,13 @@ class BaseApi:
 
 
 
+class ApiAssert:
+    @classmethod
+    def define_api_assert(cls,result,condition,exp_result):
+        try:
+            if condition == '=':
+                assert result == exp_result
+            elif condition == 'in':
+                assert result in exp_result
+        except Exception as error:
+            logger.info('抛出错误: {}'.format(error))

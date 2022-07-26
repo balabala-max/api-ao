@@ -96,10 +96,10 @@ if __name__ == '__main__':
     #
     #支付成功
     res2 = {
-            "orderprice":"32145",
-            "orderno":creaorder
+                    "orderprice": "3",
+					"item_ibz_id": "P1166362221662498861056001"
             }
-    print(res2)
+    print(type(res2))
     #
 
     print(order.payedorder(res2))

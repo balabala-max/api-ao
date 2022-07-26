@@ -45,8 +45,8 @@ test_pay_order_1:
 
 test_payorder:
     data:
-      orderno: ${orderno}
-      orderprice: '32145'
+      item_ibz_id: ${itemibzid}
+      orderprice: ${orderprice}
     expdata:
       code: 0
       msg: 支付成功!
