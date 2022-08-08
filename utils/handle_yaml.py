@@ -38,6 +38,7 @@ def  get_yaml_caseData(firDir):
 # a = get_yaml_data(os.path.join(test_path,'logincase.yaml'))
 # print(a[0]['data'])
 orderyaml = os.path.join(test_path,'tt.yaml')
+
 mysqlyaml = os.path.join(test_path,'mysql_data.yaml')
 
 ordercase = get_yaml_data(orderyaml)
