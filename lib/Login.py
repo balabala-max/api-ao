@@ -38,4 +38,5 @@ if __name__ == '__main__':
 
    #将类实例化
     a = Logining().login(rqs,getToken=True)   # 调取baseApi 中的login
+    print(a)
 

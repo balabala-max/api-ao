@@ -26,16 +26,17 @@ def get_yaml_data(fileDir):
 
 
 #获取yaml 数据放到元组内，好方便pytest 拿到函数检索
-def  get_yaml_caseData(firDir,yongliname):
+def  get_yaml_caseData(firDir):
     resList = []
     res = get_yaml_data(firDir)
-    resList.append((res[yongliname]['detail'],
-                    res[yongliname]['data'],
-                    res[yongliname]['expdata']))
+    resList.append((res[0]['detail'],
+                    res[0]['data'],
+                    res[0]['expdata']))
     return resList
 
 
-
+# a = get_yaml_data(os.path.join(test_path,'logincase.yaml'))
+# print(a[0]['data'])
 orderyaml = os.path.join(test_path,'tt.yaml')
 mysqlyaml = os.path.join(test_path,'mysql_data.yaml')
 
