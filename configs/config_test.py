@@ -1,5 +1,5 @@
 import os
-HOST =  'http://127.0.0.1:5555'
+HOST =  'http://8.142.81.77:5555'
 
 RQS = {
         "openid": "1234",
@@ -13,10 +13,10 @@ jiangRqs = {
 			"unionid": "23231442"
 		}
 
-MYSQL_HOST = "192.168.7.125"
+MYSQL_HOST = "8.142.81.77"
 MYSQL_PORT = 3306
-MYSQL_USER = "o2ouser"
-MYSQL_PASSWD = "ydprzuo2&5fdKG2i"
+MYSQL_USER = "root"
+MYSQL_PASSWD = "jiang.123"
 MYSQL_DB = "pay_dev2"
 
 

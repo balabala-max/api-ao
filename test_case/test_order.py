@@ -6,7 +6,7 @@ import json
 from commons.mysql_operate import db
 from configs.logger import logger
 from utils.bianliang import write_yaml,read_yaml1,read_yaml
-from utils.handle_yaml import mysql_yamldata,ordercase
+from utils.handle_yaml import mysql_yamldata
 from commons.baseApi import ApiAssert
 from string import Template
 import string
@@ -85,6 +85,7 @@ class TestOrder:
             # msqlselect_list = list(eval(msqlselect_list))
             logging.info("sql语句=======》",mysql_select)
             data = db.select_db(msqlselect_list)
+            print(data,'data信息公开')
             print('mysql  item_biz_id信息',data[0]['item_biz_id'])
             logger.info('取item_biz_id信息：{}'.format(data[0]['item_biz_id']))
             itemibzid = data[0]['item_biz_id']
