@@ -1,0 +1,3 @@
+[32mINFO    [0m log:test_order.py:30 创建订单请求参数：{'address': 223, 'channel': '2', 'channelShopCode': 'M2-1001', 'code': '', 'internalPurchaseVo': [{'activityId': '', 'brandNo': 10, 'count': 1, 'goodsName': 'BOOM', 'guideInfo': '', 'offlineStoreCode': '1166', 'saleType': 2, 'salesPrice': 1999, 'sku': '200502667', 'spu': 'P00211'}]}
+[32mINFO    [0m log:test_order.py:33 1-创建订单响应值：{'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}
+[32mINFO    [0m log:test_order.py:44 实际结果：{'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}， 期望结果{'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}

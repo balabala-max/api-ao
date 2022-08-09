@@ -1,0 +1,211 @@
+{
+  "uid" : "6ffc98f24e1c7127",
+  "name" : "test_order_case",
+  "fullName" : "test_case.test_order.TestOrder#test_order_case",
+  "historyId" : "c34cee3d342585c458f09b09692219c6",
+  "time" : {
+    "start" : 1658312542637,
+    "stop" : 1658312542662,
+    "duration" : 25
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: 'NoneType' object is not subscriptable",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000002637F262B38>\ntest_data = {'data': {'address': 223, 'channel': '2', 'channelShopCode': 'M2-1001', 'code': '', ...}, 'detail': '创建订单', 'expdata': {'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}}\norder_init = <lib.Loginpuls.Order object at 0x000002637F322160>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    # @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,test_data,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(test_data)\n            #createOrder 不能直接调用，只能再conftest 创建实例\n            resp = order_init.createOrder(test_data['data'])  #test_data['data] 是请求参数\n>           assert resp['msg'] ==  test_data['msg']\nE           TypeError: 'NoneType' object is not subscriptable\n\ntest_order.py:15: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test_data",
+    "time" : {
+      "start" : 1658312542635,
+      "stop" : 1658312542635,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init",
+    "time" : {
+      "start" : 1658312542632,
+      "stop" : 1658312542635,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "start_running",
+    "time" : {
+      "start" : 1658312542515,
+      "stop" : 1658312542515,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1658312542364,
+      "stop" : 1658312542515,
+      "duration" : 151
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init",
+    "time" : {
+      "start" : 1658312542516,
+      "stop" : 1658312542631,
+      "duration" : 115
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: 'NoneType' object is not subscriptable",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000002637F262B38>\ntest_data = {'data': {'address': 223, 'channel': '2', 'channelShopCode': 'M2-1001', 'code': '', ...}, 'detail': '创建订单', 'expdata': {'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}}\norder_init = <lib.Loginpuls.Order object at 0x000002637F322160>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    # @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,test_data,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(test_data)\n            #createOrder 不能直接调用，只能再conftest 创建实例\n            resp = order_init.createOrder(test_data['data'])  #test_data['data] 是请求参数\n>           assert resp['msg'] ==  test_data['msg']\nE           TypeError: 'NoneType' object is not subscriptable\n\ntest_order.py:15: TypeError",
+    "steps" : [ {
+      "name" : "1--用户登录 + 创建订单",
+      "time" : {
+        "start" : 1658312542637,
+        "stop" : 1658312542662,
+        "duration" : 25
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: 'NoneType' object is not subscriptable\n",
+      "statusTrace" : "  File \"C:\\Users\\Samsung\\Desktop\\files\\api_-ao\\test_case\\test_order.py\", line 15, in test_order_case\n    assert resp['msg'] ==  test_data['msg']\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "order_init::0",
+    "time" : {
+      "start" : 1658312542676,
+      "stop" : 1658312542677,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "start_running::0",
+    "time" : {
+      "start" : 1658312542680,
+      "stop" : 1658312542680,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init::0",
+    "time" : {
+      "start" : 1658312542679,
+      "stop" : 1658312542679,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "小程序订单流程"
+  }, {
+    "name" : "tag",
+    "value" : "testorder"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-STOS3DP"
+  }, {
+    "name" : "thread",
+    "value" : "4688-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "testorder" ]
+  },
+  "source" : "6ffc98f24e1c7127.json",
+  "parameterValues" : [ ]
+}

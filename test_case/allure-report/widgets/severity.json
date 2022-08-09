@@ -1,0 +1,61 @@
+[ {
+  "uid" : "4773dac3cc4270fe",
+  "name" : "3-支付接口",
+  "time" : {
+    "start" : 1660015626223,
+    "stop" : 1660015626310,
+    "duration" : 87
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a57813d7b2ad4ae8",
+  "name" : "2--调用支付接口",
+  "time" : {
+    "start" : 1660015626151,
+    "stop" : 1660015626218,
+    "duration" : 67
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f16e33e2aecb8bfc",
+  "name" : "test_login[登录接口-inbdoy0-expData0]",
+  "time" : {
+    "start" : 1660015625916,
+    "stop" : 1660015626013,
+    "duration" : 97
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "599b88acd06d95c0",
+  "name" : "1--用户登录 + 创建订单",
+  "time" : {
+    "start" : 1660015626100,
+    "stop" : 1660015626141,
+    "duration" : 41
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "81ce77c8858f0b15",
+  "name" : "test_order_case[小程序获取token信息-inBody0-expData0]",
+  "time" : {
+    "start" : 1658224030970,
+    "stop" : 1658224034123,
+    "duration" : 3153
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "81f970ce758ade3f",
+  "name" : "test_order_case[detail-data-expdata]",
+  "time" : {
+    "start" : 1658223630703,
+    "stop" : 1658223630705,
+    "duration" : 2
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

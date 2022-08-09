@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Jul 19 17:40:30 CST 2022","Tue Jul 19 17:40:30 CST 2022","2","test_case","test_order","TestOrder","","","test_order_case[detail-data-expdata]",""
+"passed","Tue Aug 09 11:27:06 CST 2022","Tue Aug 09 11:27:06 CST 2022","41","test_case","test_order","TestOrder","","","1--用户登录 + 创建订单",""
+"broken","Tue Jul 19 17:47:10 CST 2022","Tue Jul 19 17:47:14 CST 2022","3153","test_case","test_order","TestOrder","","","test_order_case[小程序获取token信息-inBody0-expData0]",""
+"passed","Tue Aug 09 11:27:06 CST 2022","Tue Aug 09 11:27:06 CST 2022","67","test_case","test_order","TestOrder","","","2--调用支付接口",""
+"passed","Tue Aug 09 11:27:05 CST 2022","Tue Aug 09 11:27:06 CST 2022","97","test_case","test_login","TestLogin","","","test_login[登录接口-inbdoy0-expData0]",""
+"passed","Tue Aug 09 11:27:06 CST 2022","Tue Aug 09 11:27:06 CST 2022","87","test_case","test_order","TestOrder","","","3-支付接口",""

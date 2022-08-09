@@ -1,0 +1,175 @@
+{
+  "uid" : "41a974fa65f8aebc",
+  "name" : "test_pay_order_1",
+  "fullName" : "test_case.test_order.TestOrder#test_pay_order_1",
+  "historyId" : "f2839bdf161094c9f22f2cf326592119",
+  "time" : {
+    "start" : 1658385948750,
+    "stop" : 1658385948754,
+    "duration" : 4
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: string indices must be integers",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000001DC9B443730>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '${token}'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init = <lib.Loginpuls.Order object at 0x000001DC9B446E80>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = Template(test_data['data']['token'])\n>           template = template.safe_substitute(read_yaml1()['token'])\n\ntest_order.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py:142: in safe_substitute\n    return self.pattern.sub(convert, self.template)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nmo = <re.Match object; span=(0, 8), match='${token}'>\n\n    def convert(mo):\n        named = mo.group('named') or mo.group('braced')\n        if named is not None:\n            try:\n>               return str(mapping[named])\nE               TypeError: string indices must be integers\n\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py:133: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login_init",
+    "time" : {
+      "start" : 1658385948377,
+      "stop" : 1658385948658,
+      "duration" : 281
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_token",
+    "time" : {
+      "start" : 1658385948376,
+      "stop" : 1658385948376,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init",
+    "time" : {
+      "start" : 1658385948658,
+      "stop" : 1658385948662,
+      "duration" : 4
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "test_data",
+    "time" : {
+      "start" : 1658385948750,
+      "stop" : 1658385948750,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: string indices must be integers",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000001DC9B443730>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '${token}'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init = <lib.Loginpuls.Order object at 0x000001DC9B446E80>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = Template(test_data['data']['token'])\n>           template = template.safe_substitute(read_yaml1()['token'])\n\ntest_order.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py:142: in safe_substitute\n    return self.pattern.sub(convert, self.template)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nmo = <re.Match object; span=(0, 8), match='${token}'>\n\n    def convert(mo):\n        named = mo.group('named') or mo.group('braced')\n        if named is not None:\n            try:\n>               return str(mapping[named])\nE               TypeError: string indices must be integers\n\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py:133: TypeError",
+    "steps" : [ {
+      "name" : "2--调用支付接口",
+      "time" : {
+        "start" : 1658385948751,
+        "stop" : 1658385948753,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: string indices must be integers\n",
+      "statusTrace" : "  File \"C:\\Users\\jianghaiyan\\Desktop\\hiersun\\md\\api40\\api_-ao\\test_case\\test_order.py\", line 48, in test_pay_order_1\n    template = template.safe_substitute(read_yaml1()['token'])\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py\", line 142, in safe_substitute\n    return self.pattern.sub(convert, self.template)\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py\", line 133, in convert\n    return str(mapping[named])\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "login_init::0",
+    "time" : {
+      "start" : 1658385948777,
+      "stop" : 1658385948777,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init::0",
+    "time" : {
+      "start" : 1658385948775,
+      "stop" : 1658385948775,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "D-jianghaiyan"
+  }, {
+    "name" : "thread",
+    "value" : "80712-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "41a974fa65f8aebc.json",
+  "parameterValues" : [ ]
+}

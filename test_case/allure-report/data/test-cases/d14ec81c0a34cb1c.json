@@ -1,0 +1,211 @@
+{
+  "uid" : "d14ec81c0a34cb1c",
+  "name" : "test_order_case",
+  "fullName" : "test_case.test_order.TestOrder#test_order_case",
+  "historyId" : "c34cee3d342585c458f09b09692219c6",
+  "time" : {
+    "start" : 1658313067847,
+    "stop" : 1658313067863,
+    "duration" : 16
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'msg'",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x00000181C9F86AC8>\ntest_data = {'data': {'address': 223, 'channel': '2', 'channelShopCode': 'M2-1001', 'code': '', ...}, 'detail': '创建订单', 'expdata': {'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}}\norder_init = <lib.Loginpuls.Order object at 0x00000181C9F78F60>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    # @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,test_data,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(test_data)\n            #createOrder 不能直接调用，只能再conftest 创建实例\n            res = test_data['data']   #请求参数\n            resp = order_init.createOrder(res)  #test_data['data] 是请求参数\n            print('响应值',resp)\n>           assert resp['msg'] ==  test_data['data']['msg']\nE           KeyError: 'msg'\n\ntest_order.py:17: KeyError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "test_data",
+    "time" : {
+      "start" : 1658313067846,
+      "stop" : 1658313067846,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1658313067693,
+      "stop" : 1658313067770,
+      "duration" : 77
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init",
+    "time" : {
+      "start" : 1658313067843,
+      "stop" : 1658313067846,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init",
+    "time" : {
+      "start" : 1658313067770,
+      "stop" : 1658313067843,
+      "duration" : 73
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "start_running",
+    "time" : {
+      "start" : 1658313067770,
+      "stop" : 1658313067770,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "KeyError: 'msg'",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x00000181C9F86AC8>\ntest_data = {'data': {'address': 223, 'channel': '2', 'channelShopCode': 'M2-1001', 'code': '', ...}, 'detail': '创建订单', 'expdata': {'code': 0, 'msg': '创建订单成功！', 'orderno': 'M25345363534534534534'}}\norder_init = <lib.Loginpuls.Order object at 0x00000181C9F78F60>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    # @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,test_data,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(test_data)\n            #createOrder 不能直接调用，只能再conftest 创建实例\n            res = test_data['data']   #请求参数\n            resp = order_init.createOrder(res)  #test_data['data] 是请求参数\n            print('响应值',resp)\n>           assert resp['msg'] ==  test_data['data']['msg']\nE           KeyError: 'msg'\n\ntest_order.py:17: KeyError",
+    "steps" : [ {
+      "name" : "1--用户登录 + 创建订单",
+      "time" : {
+        "start" : 1658313067847,
+        "stop" : 1658313067862,
+        "duration" : 15
+      },
+      "status" : "broken",
+      "statusMessage" : "KeyError: 'msg'\n",
+      "statusTrace" : "  File \"C:\\Users\\Samsung\\Desktop\\files\\api_-ao\\test_case\\test_order.py\", line 17, in test_order_case\n    assert resp['msg'] ==  test_data['data']['msg']\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "order_init::0",
+    "time" : {
+      "start" : 1658313067873,
+      "stop" : 1658313067873,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init::0",
+    "time" : {
+      "start" : 1658313067874,
+      "stop" : 1658313067874,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "start_running::0",
+    "time" : {
+      "start" : 1658313067875,
+      "stop" : 1658313067875,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "小程序订单流程"
+  }, {
+    "name" : "tag",
+    "value" : "testorder"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-STOS3DP"
+  }, {
+    "name" : "thread",
+    "value" : "14420-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "testorder" ]
+  },
+  "source" : "d14ec81c0a34cb1c.json",
+  "parameterValues" : [ ]
+}

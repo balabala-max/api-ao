@@ -1,0 +1,7 @@
+[32mINFO    [0m log:test_order.py:84 小程序sql语句SELECT item_biz_id from pay_bill_order_item where tid='M25345363534534534534';
+[32mINFO    [0m log:test_order.py:90 取item_biz_id信息：P1166362221662498861056001
+[32mINFO    [0m log:test_order.py:103 取价格信息32145
+[32mINFO    [0m log:test_order.py:115 调用接口请求参数:{'item_ibz_id': 'P1166362221662498861056001', 'orderprice': '32145'}
+[32mINFO    [0m log:test_order.py:117 调用接口响应值值：{'code': 0, 'msg': '支付成功!'}
+[32mINFO    [0m log:test_order.py:119 实际结果：{'code': 0, 'msg': '支付成功!'}， 期望结果{'code': 0, 'msg': '支付成功!'}
+[35mDEBUG   [0m log:test_order.py:122 -------------------------------测试结束--------------------------------------

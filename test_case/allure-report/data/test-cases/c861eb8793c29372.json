@@ -1,0 +1,175 @@
+{
+  "uid" : "c861eb8793c29372",
+  "name" : "test_pay_order_1",
+  "fullName" : "test_case.test_order.TestOrder#test_pay_order_1",
+  "historyId" : "f2839bdf161094c9f22f2cf326592119",
+  "time" : {
+    "start" : 1658398014785,
+    "stop" : 1658398014792,
+    "duration" : 7
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: Can't compile non template nodes",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000001CDB7E77AF0>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '234af73571da46ade79ea6a74961b1d23d609b79'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init1 = <lib.Loginpuls.Order object at 0x000001CDB7FA05B0>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init1,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = string.Template(login_init)\n            test_data['data']['token'] = template.safe_substitute(test_data['data']['token'])\n    \n            # template2 =  Template(read_yaml()['Order']['payorder']['path'])\n            # read_yaml()['Order']['payorder']['path'] = template2.safe_substitute({\"orderno\":orderno})\n    \n    \n            new_orderno = {\"orderno\":orderno}\n            # with open(\"../data/order.yaml\", encoding=\"utf-8\")as w:\n            #     # value = yaml.load(f,Loader=yaml.FullLoader)\n            #     string_var = w.read()\n            # print(type(string_var))\n            # a = read_yaml()['Order']\n            # print(type(a))\n            #\n>           respa = jinja2.Template(read_yaml()).render(new_orderno)\n\ntest_order.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:1208: in __new__\n    return env.from_string(source, template_class=cls)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:1105: in from_string\n    return cls.from_code(self, self.compile(source), gs, None)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:761: in compile\n    source = self._generate(source, name, filename, defer_init=defer_init)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:689: in _generate\n    return generate(  # type: ignore\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nnode = {'Logining': {'login': {'method': 'GET', 'path': '/api/v1/member-auth/wechat-member/idomall/is-exist-user'}}, 'Order':.../pay-srv/pay/wxpay/notify?_flag=false'}, 'payorder': {'method': 'GET', 'path': '/perfume/order/wxpay/mp2/${orderno}'}}}\nenvironment = <jinja2.environment.Environment object at 0x000001CDB7FA09A0>\nname = None, filename = None, stream = None, defer_init = False\noptimized = True\n\n    def generate(\n        node: nodes.Template,\n        environment: \"Environment\",\n        name: t.Optional[str],\n        filename: t.Optional[str],\n        stream: t.Optional[t.TextIO] = None,\n        defer_init: bool = False,\n        optimized: bool = True,\n    ) -> t.Optional[str]:\n        \"\"\"Generate the python source for a node tree.\"\"\"\n        if not isinstance(node, nodes.Template):\n>           raise TypeError(\"Can't compile non template nodes\")\nE           TypeError: Can't compile non template nodes\n\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\compiler.py:112: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "order_init1",
+    "time" : {
+      "start" : 1658398014766,
+      "stop" : 1658398014785,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_token",
+    "time" : {
+      "start" : 1658398014251,
+      "stop" : 1658398014251,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "test_data",
+    "time" : {
+      "start" : 1658398014785,
+      "stop" : 1658398014785,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init",
+    "time" : {
+      "start" : 1658398014252,
+      "stop" : 1658398014573,
+      "duration" : 321
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: Can't compile non template nodes",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000001CDB7E77AF0>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '234af73571da46ade79ea6a74961b1d23d609b79'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init1 = <lib.Loginpuls.Order object at 0x000001CDB7FA05B0>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init1,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = string.Template(login_init)\n            test_data['data']['token'] = template.safe_substitute(test_data['data']['token'])\n    \n            # template2 =  Template(read_yaml()['Order']['payorder']['path'])\n            # read_yaml()['Order']['payorder']['path'] = template2.safe_substitute({\"orderno\":orderno})\n    \n    \n            new_orderno = {\"orderno\":orderno}\n            # with open(\"../data/order.yaml\", encoding=\"utf-8\")as w:\n            #     # value = yaml.load(f,Loader=yaml.FullLoader)\n            #     string_var = w.read()\n            # print(type(string_var))\n            # a = read_yaml()['Order']\n            # print(type(a))\n            #\n>           respa = jinja2.Template(read_yaml()).render(new_orderno)\n\ntest_order.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:1208: in __new__\n    return env.from_string(source, template_class=cls)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:1105: in from_string\n    return cls.from_code(self, self.compile(source), gs, None)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:761: in compile\n    source = self._generate(source, name, filename, defer_init=defer_init)\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py:689: in _generate\n    return generate(  # type: ignore\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nnode = {'Logining': {'login': {'method': 'GET', 'path': '/api/v1/member-auth/wechat-member/idomall/is-exist-user'}}, 'Order':.../pay-srv/pay/wxpay/notify?_flag=false'}, 'payorder': {'method': 'GET', 'path': '/perfume/order/wxpay/mp2/${orderno}'}}}\nenvironment = <jinja2.environment.Environment object at 0x000001CDB7FA09A0>\nname = None, filename = None, stream = None, defer_init = False\noptimized = True\n\n    def generate(\n        node: nodes.Template,\n        environment: \"Environment\",\n        name: t.Optional[str],\n        filename: t.Optional[str],\n        stream: t.Optional[t.TextIO] = None,\n        defer_init: bool = False,\n        optimized: bool = True,\n    ) -> t.Optional[str]:\n        \"\"\"Generate the python source for a node tree.\"\"\"\n        if not isinstance(node, nodes.Template):\n>           raise TypeError(\"Can't compile non template nodes\")\nE           TypeError: Can't compile non template nodes\n\n..\\..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\compiler.py:112: TypeError",
+    "steps" : [ {
+      "name" : "2--调用支付接口",
+      "time" : {
+        "start" : 1658398014786,
+        "stop" : 1658398014788,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: Can't compile non template nodes\n",
+      "statusTrace" : "  File \"C:\\Users\\jianghaiyan\\Desktop\\hiersun\\md\\api40\\api_-ao\\test_case\\test_order.py\", line 64, in test_pay_order_1\n    respa = jinja2.Template(read_yaml()).render(new_orderno)\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py\", line 1208, in __new__\n    return env.from_string(source, template_class=cls)\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py\", line 1105, in from_string\n    return cls.from_code(self, self.compile(source), gs, None)\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py\", line 761, in compile\n    source = self._generate(source, name, filename, defer_init=defer_init)\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\environment.py\", line 689, in _generate\n    return generate(  # type: ignore\n  File \"C:\\Users\\jianghaiyan\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\jinja2\\compiler.py\", line 112, in generate\n    raise TypeError(\"Can't compile non template nodes\")\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "order_init1::0",
+    "time" : {
+      "start" : 1658398014957,
+      "stop" : 1658398014957,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "login_init::0",
+    "time" : {
+      "start" : 1658398014962,
+      "stop" : 1658398014962,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "D-jianghaiyan"
+  }, {
+    "name" : "thread",
+    "value" : "86448-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c861eb8793c29372.json",
+  "parameterValues" : [ ]
+}

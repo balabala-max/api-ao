@@ -20,7 +20,6 @@ class TestOrder:
     logger.info("----------------------------测试开始-----------------------------")
     @allure.title('1--用户登录 + 创建订单')
     @allure.story('小程序订单流程')
-    # @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))
     def test_order_case(self,test_data,order_init,login_init):
         with allure.step('1--用户登录 + 创建订单'):
 
@@ -130,8 +129,9 @@ class TestOrder:
 
 
 if __name__ == '__main__':
-    pytest.main(['test_order.py', '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
-    os.system(f'allure serve {report_path}')
+    pytest.main(['-q', '-s', 'test_order.py'])
+    # pytest.main(['test_order.py', '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    # os.system(f'allure serve {report_path}')
 
 
 

@@ -1,0 +1,136 @@
+{
+  "uid" : "81ce77c8858f0b15",
+  "name" : "test_order_case[小程序获取token信息-inBody0-expData0]",
+  "fullName" : "test_case.test_order.TestOrder#test_order_case",
+  "historyId" : "853713fbb120cfe3b0df04e828495836",
+  "time" : {
+    "start" : 1658224030970,
+    "stop" : 1658224034123,
+    "duration" : 3153
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: 'NoneType' object is not subscriptable",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x0000018C18D5A5B0>\ntitle = '小程序获取token信息'\ninBody = {'appid': '4567,', 'openid': '1234,', 'unionid': 23231442}\nexpData = {'code': 0, 'mdg': '登录成功'}\norder_init = <lib.Loginpuls.Order object at 0x0000018C18D5A3D0>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,title,inBody,expData,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(title,inBody,expData)\n>           createorder = order_init.createOrder(inBody)\n\ntest_order.py:18: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <lib.Loginpuls.Order object at 0x0000018C18D5A3D0>\ninData = '{\"openid\": \"1234,\", \"appid\": \"4567,\", \"unionid\": 23231442}'\n\n    def createOrder(self,inData):\n        if isinstance(inData,dict)==True:\n            inData = json.dumps(inData)\n            resp=self.request_send(data=inData)\n>       return resp['orderno']\nE       TypeError: 'NoneType' object is not subscriptable\n\n..\\lib\\Loginpuls.py:14: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "order_init",
+    "time" : {
+      "start" : 1658224030967,
+      "stop" : 1658224030970,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: 'NoneType' object is not subscriptable",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x0000018C18D5A5B0>\ntitle = '小程序获取token信息'\ninBody = {'appid': '4567,', 'openid': '1234,', 'unionid': 23231442}\nexpData = {'code': 0, 'mdg': '登录成功'}\norder_init = <lib.Loginpuls.Order object at 0x0000018C18D5A3D0>\n\n    @pytest.mark.testorder\n    @allure.story('小程序订单流程')\n    @pytest.mark.parametrize('title,inBody,expData',get_yaml_caseData(orderyaml,'test_login'))\n    def test_order_case(self,title,inBody,expData,order_init):\n        with allure.step('1--用户登录 + 创建订单'):\n            print(title,inBody,expData)\n>           createorder = order_init.createOrder(inBody)\n\ntest_order.py:18: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <lib.Loginpuls.Order object at 0x0000018C18D5A3D0>\ninData = '{\"openid\": \"1234,\", \"appid\": \"4567,\", \"unionid\": 23231442}'\n\n    def createOrder(self,inData):\n        if isinstance(inData,dict)==True:\n            inData = json.dumps(inData)\n            resp=self.request_send(data=inData)\n>       return resp['orderno']\nE       TypeError: 'NoneType' object is not subscriptable\n\n..\\lib\\Loginpuls.py:14: TypeError",
+    "steps" : [ {
+      "name" : "1--用户登录 + 创建订单",
+      "time" : {
+        "start" : 1658224030971,
+        "stop" : 1658224034123,
+        "duration" : 3152
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: 'NoneType' object is not subscriptable\n",
+      "statusTrace" : "  File \"C:\\Users\\jianghaiyan\\Desktop\\hiersun\\md\\api40\\api_-ao\\test_case\\test_order.py\", line 18, in test_order_case\n    createorder = order_init.createOrder(inBody)\n  File \"C:\\Users\\jianghaiyan\\Desktop\\hiersun\\md\\api40\\api_-ao\\lib\\Loginpuls.py\", line 14, in createOrder\n    return resp['orderno']\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "order_init::0",
+    "time" : {
+      "start" : 1658224034139,
+      "stop" : 1658224034139,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "小程序订单流程"
+  }, {
+    "name" : "tag",
+    "value" : "testorder"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "D-jianghaiyan"
+  }, {
+    "name" : "thread",
+    "value" : "53868-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expData",
+    "value" : "{'mdg': '登录成功', 'code': 0}"
+  }, {
+    "name" : "inBody",
+    "value" : "{'openid': '1234,', 'appid': '4567,', 'unionid': 23231442}"
+  }, {
+    "name" : "title",
+    "value" : "'小程序获取token信息'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "testorder" ]
+  },
+  "source" : "81ce77c8858f0b15.json",
+  "parameterValues" : [ "{'mdg': '登录成功', 'code': 0}", "{'openid': '1234,', 'appid': '4567,', 'unionid': 23231442}", "'小程序获取token信息'" ]
+}

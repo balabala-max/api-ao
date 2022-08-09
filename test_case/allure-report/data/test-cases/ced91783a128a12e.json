@@ -1,0 +1,175 @@
+{
+  "uid" : "ced91783a128a12e",
+  "name" : "test_pay_order_1",
+  "fullName" : "test_case.test_order.TestOrder#test_pay_order_1",
+  "historyId" : "f2839bdf161094c9f22f2cf326592119",
+  "time" : {
+    "start" : 1658395398861,
+    "stop" : 1658395398865,
+    "duration" : 4
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: string indices must be integers",
+  "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000002100A4A8BE0>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '234af73571da46ade79ea6a74961b1d23d609b79'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init1 = <lib.Loginpuls.Order object at 0x000002100A4B3940>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init1,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = string.Template(login_init)\n            test_data['data']['token'] = template.safe_substitute(test_data['data']['token'])\n    \n            # template2 = string.Template(orderno)  #从变量里提取orderno\n            # a = template2.safe_substitute(read_yaml()['Order']['payorder']['path'])\n            # read_yaml()['Order']['payorder']['path'] = a\n    \n            new_orderno = {\"orderno\":orderno}\n>           respa = jinja2.Template(read_yaml()['Order']['payorder'].render(new_orderno))\nE           TypeError: string indices must be integers\n\ntest_order.py:57: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login_init",
+    "time" : {
+      "start" : 1658395398341,
+      "stop" : 1658395398765,
+      "duration" : 424
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init1",
+    "time" : {
+      "start" : 1658395398856,
+      "stop" : 1658395398860,
+      "duration" : 4
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "test_data",
+    "time" : {
+      "start" : 1658395398860,
+      "stop" : 1658395398861,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_token",
+    "time" : {
+      "start" : 1658395398340,
+      "stop" : 1658395398341,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: string indices must be integers",
+    "statusTrace" : "self = <test_case.test_order.TestOrder object at 0x000002100A4A8BE0>\ntest_data = {'data': {'openid': '1234', 'store': '1020', 'token': '234af73571da46ade79ea6a74961b1d23d609b79'}, 'expdata': {'code': 0, 'mdg': '调取支付接口成功!'}}\norder_init1 = <lib.Loginpuls.Order object at 0x000002100A4B3940>\nlogin_init = '234af73571da46ade79ea6a74961b1d23d609b79'\n\n    def test_pay_order_1(self,test_data,order_init1,login_init):\n        with allure.step('2--调用支付接口'):\n            # template = Template(test_data['orderno'])\n            # print('替换',template)\n            # _token = login_init\n            # token = test_data['data'][_token]   #请求参数、\n            # new_data = replace_yaml(login_init)\n            # print('new_data',new_data)\n            # print('请求参数打印',test_data['data'])\n            orderno = read_yaml1()['orderno']\n            print('订单号',orderno)\n            #对token 替换\n            template = string.Template(login_init)\n            test_data['data']['token'] = template.safe_substitute(test_data['data']['token'])\n    \n            # template2 = string.Template(orderno)  #从变量里提取orderno\n            # a = template2.safe_substitute(read_yaml()['Order']['payorder']['path'])\n            # read_yaml()['Order']['payorder']['path'] = a\n    \n            new_orderno = {\"orderno\":orderno}\n>           respa = jinja2.Template(read_yaml()['Order']['payorder'].render(new_orderno))\nE           TypeError: string indices must be integers\n\ntest_order.py:57: TypeError",
+    "steps" : [ {
+      "name" : "2--调用支付接口",
+      "time" : {
+        "start" : 1658395398862,
+        "stop" : 1658395398864,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: string indices must be integers\n",
+      "statusTrace" : "  File \"C:\\Users\\jianghaiyan\\Desktop\\hiersun\\md\\api40\\api_-ao\\test_case\\test_order.py\", line 57, in test_pay_order_1\n    respa = jinja2.Template(read_yaml()['Order']['payorder'].render(new_orderno))\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "login_init::0",
+    "time" : {
+      "start" : 1658395398880,
+      "stop" : 1658395398880,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "order_init1::0",
+    "time" : {
+      "start" : 1658395398877,
+      "stop" : 1658395398877,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_case"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "D-jianghaiyan"
+  }, {
+    "name" : "thread",
+    "value" : "85976-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_case.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ced91783a128a12e.json",
+  "parameterValues" : [ ]
+}

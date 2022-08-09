@@ -1,0 +1,103 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_case",
+    "children" : [ {
+      "name" : "test_order",
+      "children" : [ {
+        "name" : "TestOrder",
+        "children" : [ {
+          "name" : "test_order_case[detail-data-expdata]",
+          "uid" : "81f970ce758ade3f",
+          "parentUid" : "51c3940679567785117bbce295843713",
+          "status" : "broken",
+          "time" : {
+            "start" : 1658223630703,
+            "stop" : 1658223630705,
+            "duration" : 2
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'expdata'", "'data'", "'detail'" ]
+        }, {
+          "name" : "test_order_case[小程序获取token信息-inBody0-expData0]",
+          "uid" : "81ce77c8858f0b15",
+          "parentUid" : "51c3940679567785117bbce295843713",
+          "status" : "broken",
+          "time" : {
+            "start" : 1658224030970,
+            "stop" : 1658224034123,
+            "duration" : 3153
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'mdg': '登录成功', 'code': 0}", "{'openid': '1234,', 'appid': '4567,', 'unionid': 23231442}", "'小程序获取token信息'" ]
+        }, {
+          "name" : "1--用户登录 + 创建订单",
+          "uid" : "599b88acd06d95c0",
+          "parentUid" : "51c3940679567785117bbce295843713",
+          "status" : "passed",
+          "time" : {
+            "start" : 1660015626100,
+            "stop" : 1660015626141,
+            "duration" : 41
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "2--调用支付接口",
+          "uid" : "a57813d7b2ad4ae8",
+          "parentUid" : "51c3940679567785117bbce295843713",
+          "status" : "passed",
+          "time" : {
+            "start" : 1660015626151,
+            "stop" : 1660015626218,
+            "duration" : 67
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "3-支付接口",
+          "uid" : "4773dac3cc4270fe",
+          "parentUid" : "51c3940679567785117bbce295843713",
+          "status" : "passed",
+          "time" : {
+            "start" : 1660015626223,
+            "stop" : 1660015626310,
+            "duration" : 87
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "51c3940679567785117bbce295843713"
+      } ],
+      "uid" : "edd362a487e4f3ba56580a47bf347ccf"
+    }, {
+      "name" : "test_login",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "test_login[登录接口-inbdoy0-expData0]",
+          "uid" : "f16e33e2aecb8bfc",
+          "parentUid" : "0d8e8f730d883d96f0f07d44568a84e6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1660015625916,
+            "stop" : 1660015626013,
+            "duration" : 97
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'code': 0, 'msg': '登录成功!', 'token': '234af73571da46ade79ea6a74961b1d23d609b79'}", "{'appid': '4567', 'openid': '1234', 'unionid': '23231442'}", "'登录接口'" ]
+        } ],
+        "uid" : "0d8e8f730d883d96f0f07d44568a84e6"
+      } ],
+      "uid" : "b0d25e7592ecf0ad5c1e978c2b721247"
+    } ],
+    "uid" : "86abcc46617c603d802c3e378b13740e"
+  } ]
+}
