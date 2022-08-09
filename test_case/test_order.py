@@ -135,6 +135,7 @@ if __name__ == '__main__':
     pytest.main(['-q', '-s'])
     # pytest.main([ '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
     os.system(f'allure serve {report_path}')
+    # addopts = --alluredir.. / report / tmp - -clean - alluredir
 
 
 
