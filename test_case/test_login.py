@@ -4,6 +4,7 @@ from utils.handle_yaml import get_yaml_caseData,test_path
 from lib.Login import Logining
 from commons.baseApi import ApiAssert
 import os
+report_path = '../report/tmp'
 
 @allure.feature('登录操作')
 class TestLogin():
@@ -17,4 +18,5 @@ class TestLogin():
 
 
 if __name__ == '__main__':
-    pytest.main(['-s','test_login.py'])
+    pytest.main(['test_login.py', '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    os.system(f'allure serve {report_path}')
