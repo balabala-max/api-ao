@@ -18,6 +18,7 @@ class TestOrder:
 
     # @pytest.mark.testorder
     logger.info("----------------------------测试开始-----------------------------")
+
     @allure.title('1--用户登录 + 创建订单')
     @allure.story('小程序订单流程')
     def test_order_case(self,test_data,order_init,login_init):
@@ -42,6 +43,7 @@ class TestOrder:
             print('信息信息',test_data['expdata']['msg'])
             logger.info('实际结果：{}， 期望结果{}'.format(resp, test_data['expdata']))
             ApiAssert.define_api_assert(resp['code'],'=',test_data['expdata']['code'])
+
 
     @allure.title('2--调用支付接口')
     @allure.story('小程序订单流程')
@@ -70,6 +72,7 @@ class TestOrder:
 
             logger.info('实际结果：{}， 期望结果{}'.format(resp, test_data['expdata']))
             ApiAssert.define_api_assert(resp['code'],'=',test_data['expdata']['code'])
+
 
     @allure.title('3-支付接口')
     @allure.story('小程序订单流程')
@@ -129,9 +132,9 @@ class TestOrder:
 
 
 if __name__ == '__main__':
-    pytest.main(['-q', '-s', 'test_order.py'])
-    # pytest.main(['test_order.py', '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
-    # os.system(f'allure serve {report_path}')
+    pytest.main(['-q', '-s'])
+    # pytest.main([ '-s', '--alluredir', f'{report_path}', '--clean-alluredir'])
+    os.system(f'allure serve {report_path}')
 
 
 
